@@ -85,21 +85,21 @@ As explained above, the modal body will render custom HTML elements from the `co
 
 In `PSModal.css`, sections that are required are clearly marked with a **Required Styles** comment while sections that are editable are marked with an **Add Custom Styles Here** comment.  (Technically, all style sections are editable, just make sure you know what you're doing first).  An example of the `psModalWindow` element CSS is below:
 
-	```CSS
-	#psModalWindow {
+```CSS
+#psModalWindow {
 
-    	/* Required Styles */
-    	position: relative;
-    	z-index: 2000;
+   	/* Required Styles */
+   	position: relative;
+   	z-index: 2000;
 
-    	/* Add Custom Styles Here */
-    	background: none repeat scroll 0 0 #FFFFFF;
-    	border: 1px solid #CCCCCC;
-    	border-radius: 5px;
-    	min-width: 400px;
+   	/* Add Custom Styles Here */
+   	background: none repeat scroll 0 0 #FFFFFF;
+   	border: 1px solid #CCCCCC;
+   	border-radius: 5px;
+   	min-width: 400px;
 
-	}
-	```
+}
+```
 
 
 Developed By
