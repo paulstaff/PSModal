@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PSModal.js</title>
+
+    <!-- Javascript -->
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="PSModal.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="PSModal.css">
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sunburst"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            $("#createCode").html(convertToHtml('var title = "Test Modal Title";' +
+                                                '\n\nvar content =  \t\'<div class="psModalItem">\' +' +
+                                                '\n\t\t\t\t\'<div>This is an item in the modal window.  As you can see, the modal </div>\' +' +
+                                                '\n\t\t\t\'</div>\' +' +
+                                                '\n\t\t\t\'<div id="psModalFooter">\' +' +
+                                                '\n\t\t\t\t\'<div class="btn" onclick="PSModal.close()">Close Modal</div>\' +' +
+                                                '\n\t\t\t\'</div>\';' +
+                                                '\n\nvar options = {' +
+                                                '\n\twidth: 800' +
+                                                '\n};' +
+                                                '\n\nPSModal.open(title, content, options);'));
+        });
+
+        function convertToHtml(s) {
+            return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        };
+
+        function openTestModal() {
+            var title = "Test Modal Title";
+
+            var content =  '<div class="psModalItem">' +
+                            '   <div>This is an item in the modal window.  As you can see, the modal window retains CSS styles present in your project, such as font and HTML elements like the button below.</div>' +
+                            '</div> ' +
+                            '<div id="psModalFooter">' +
+                            '   <div class="btn" onclick="PSModal.close()">Close Modal</div>' +
+                            '</div> ';
+
+            var options = {
+                width: 800
+            };
+
+            PSModal.open(title, content, options);
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <div id="header">
+        <div class="title">PSModal.js</div>
+        <div class="subtitle">Easy, Beautiful Modal Windows</div>
+    </div>
+
+    <div id="content">
+
+        <div class="contentSection">PSModal.js provides you with an easy-to-use modal window that looks good in every browser (well, maybe I haven't tested it in IE, but does anyone really use IE?).  Generating a modal with PSModal involves calling one function; it's that simple.</div>
+
+        <div class="spacer"></div>
+
+        <div class="menu">
+            <div class="btn" onclick="openTestModal()">Open Test Modal</div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="contentSection">Using PSModal.js is easy, just include the <code>PSModal.js</code> and <code>PSModal.css</code> files in your project, create <code>title</code>, <code>content</code>, and <code>options</code> (optional) variables to pass in to the function, and then call <code>PSModal.open(title, content, options)</code>.</code></div>
+
+        <pre class="prettyprint lang-javascript contentSection" id="createCode"></pre>
+
+        <div class="spacer"></div>
+
+        <div class="menu">
+            <div class="btn" onclick="window.location='PSModal.zip'">Download Source</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
