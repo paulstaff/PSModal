@@ -59,12 +59,12 @@ The `title` variable is used to pass in the title displayed in the header sectio
 
 #### `content` Variable
 
-The `content` variable is used to pass in the main body of the modal window.  This variable is a string that can be comnposed of HTML elements to display custom information in the modal window.
+The `content` variable is used to pass in the main body of the modal window.  This variable is a string that can be composed of HTML elements to display custom information in the modal window.
 
 There are number of preset elements designed and style specifically to be used in the `content` passed into the open modal function.  `content` can include any of these elements as well as any custom elements you wish to include.  Preset elements are as follows:
 
 - `modalItem` - a standard `div` with appropriately styled margins and padding for PSModal.
-- `modalFooter` - a `div` to be used at the bottom of the modal window; includes a dividing line at the top along with approriate margins and padding.
+- `modalFooter` - a `div` to be used at the bottom of the modal window; includes a dividing line at the top along with appropriate margins and padding.
 
 #### `options` Variable
 
